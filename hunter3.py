@@ -1,3 +1,4 @@
+
 n=input()
 if n.isalpha():
     print("invalid")
@@ -7,7 +8,11 @@ else:
     chk=0
     for i in range(0,n):
         if a[i]==i:
-            print(i,end=' ')
-            chk=1
+            if(i==n-1):
+                print(i)
+                chk=1
+            else:
+                print(i,end=' ')
+                chk=1
     if chk==0:
         print(-1)
