@@ -3,7 +3,8 @@ if n.isalpha():
     print("invalid")
 else:
     n=int(n)
-    a=list(input()for i in range(n))
+    # a=list(input()for i in range(n))
+    a = [int(i) for i in input().split()]
 
     for i in range(0,n):
 
