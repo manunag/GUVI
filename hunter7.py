@@ -7,12 +7,12 @@ for i in range(0,n):
             print(a[i],end='')
             j=j+1
         else:
-            print('',end=' ')
-            print(a[i],end='')
+            # print('',end=' ')
+            print('',a[i],end='')
     elif i%2!=0 and a[i]%2==0:
         if j==0:
-            print(a[i])
+            print(a[i],end='')
             j=j+1
         else:
-            print('',end=' ')
-            print(a[i],end='')
+            # print('',end=' ')
+            print('',a[i],end='')
