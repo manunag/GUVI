@@ -1,4 +1,3 @@
-
 n=input()
 if n.isalpha():
     print("invalid")
@@ -9,9 +8,8 @@ else:
 
     for i in range(0,n):
         count=int(0)
-        for j in range(i+1,n):
+        for j in range(0,n):
             if a[i]==a[j]:
-                a[j]='\0'
                 count = count+1
-        if count==0:
+        if count==1:
             print(a[i])
