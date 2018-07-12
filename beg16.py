@@ -1,15 +1,17 @@
-x=input()
-y=input()
-count=0
-if x.isalpha() or y.isalpha():
-    print("Invaild")
-else:
-    x=int(x)
-    y=int(y)
-    for i in range((x+1),y):
-        for a in range(2,i):
-            if i%a==0:
-                count=1
-        if count==0:
-            print(i,end=' ')
-        count=0
+a,b=input().split()
+a=int(a)
+b=int(b)
+z=[]
+for i in range(a+1,b):
+    c=0
+    for j in range(2,i):
+        if i%j==0:
+            c=c+1
+    if c==0:
+        z.append(i)
+x=len(z)
+for i in range(0,x):
+    if(i==x-1):
+        print(z[i])
+    else:
+        print(z[i],end=' ')
