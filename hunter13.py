@@ -27,6 +27,6 @@ for i in range(0,l):
     if x[i] not in z[i]:
         count=0
 if count==0:
-    print("no")
+    print("NO")
 else:
-    print("yes")
+    print("YES")
