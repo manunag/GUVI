@@ -1,4 +1,4 @@
-n=int(input())
+t=int(input())
 b=[int(i) for i in input().split()]
 y=[]
 for i in range(len(b)):
@@ -6,7 +6,6 @@ for i in range(len(b)):
         b[i]=int((b[i]/b[i]))*-1
     else:
         b[i]=int(b[i]/b[i])
-
 z=int(-1)
 for i in range(len(b)):
     count=0
@@ -24,7 +23,6 @@ for i in range(len(b)):
             else:
                 y.append(count)
                 break
-
     else:
         z=1
         count=count+1
