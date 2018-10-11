@@ -1,3 +1,4 @@
+
 a=input()
 b=len(a)
 x=[]
@@ -14,8 +15,9 @@ for i in range(0,int(b)):
             if(a[t]==a[s]):
                 c=1
         else:
-            while(t!=(s+1)):
+            while(t!=(s+1) and t!=s):
                 
+
                 if(a[t] == a[s]):
                     c=1
                 else:
