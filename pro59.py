@@ -1,8 +1,9 @@
+import sys
 a = input()
 b = a.split('|')
 c = input()
 
-n = len(b[0])-len(b[1])
+n = abs(len(b[0])-len(b[1]))
 
 if n==0 :
     print('Impossible')
