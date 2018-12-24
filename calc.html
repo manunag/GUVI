@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+      .mai{
+        margin-top: 300px;
+
+          margin-left:300px;
+
+
+      }
+      h1{margin: 0;
+
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+      }
+
+input[type="text"]{
+
+
+  width:35%;
+  padding: 12px 20px;
+    margin: 8px 0;
+}
+button[type="button"],h1{
+  width: 10%;
+
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
+}
+    </style>
+    <script type="text/javascript">
+        var sw=0;
+        var g=null;
+        var num1;
+        var num1;
+
+        function num(x) {
+
+
+          if (g==null){
+            g=x;
+            var z=document.getElementById('gg');
+            z.value=x;
+            num1=g;
+          }
+          else
+            {
+              g=g*10;
+              g=g+x;
+                var z=document.getElementById('gg');
+              z.value=g;
+              num1=g;
+            }
+      }
+      function add(){
+
+        if(sw==0){
+           num2=num1;
+        sw=1;
+        g=null;
+      }
+      else{
+
+         var z=document.getElementById('gg');
+         z.value="";
+         z.value=num1+num2 ;
+               }
+      }
+      function sub(){
+
+        if(sw==0){
+           num2=num1;
+        sw=2;
+        g=null;
+      }
+      else{
+
+         var z=document.getElementById('gg');
+         z.value="";
+         z.value=num1-num2 ;
+               }
+      }
+      function mul(){
+
+        if(sw==0){
+           num2=num1;
+        sw=3;
+        g=null;
+      }
+      else{
+
+         var z=document.getElementById('gg');
+         z.value="";
+         z.value=num1*num2 ;
+               }
+      }
+      function div(){
+
+        if(sw==0){
+           num2=num1;
+        sw=4;
+        g=null;
+      }
+      else{
+
+         var z=document.getElementById('gg');
+         z.value="";
+         z.value=num1/num2 ;
+               }
+      }
+      function cle(){
+          g=null;
+          sw=0;
+          document.getElementById('gg').value="";
+          num1=0;
+          num2=0;
+
+      }
+      function equals(){
+
+        switch (sw) {
+          case 1:
+          add();
+
+            break;
+            case 2:
+            sub();
+            break;
+            case 3:
+            mul();
+            break;
+            case 4:
+            div();
+            break;
+
+          default:
+
+        }
+
+      }
+
+
+    </script>
+
+    <meta charset="utf-8">
+    <title>My Calculator</title>
+  </head>
+  <body>
+<h1>Calculator</h1>
+    <form class="mai" action="index.html" method="post">
+      <input id="gg" type="text" name="" value="" readonly><br>
+      <button type="button" onclick="num(1)" name="1">1</button>
+        <button type="button" onclick="num(2)" name="2">2</button>
+          <button type="button" onclick="num(3)" name="3">3</button>
+              <button type="button" onclick="add()" name="+">+</button><br>
+            <button type="button" onclick="num(4)" name="4">4</button>
+              <button type="button" onclick="num(5)" name="5">5</button>
+                <button type="button" onclick="num(6)"name="6">6</button>
+                  <button type="button" onclick="sub()"name="-">-</button><br>
+                  <button type="button" onclick="num(7)" name="7">7</button>
+                    <button type="button" onclick="num(8)" name="8">8</button>
+                      <button type="button" onclick="num(9)" name="9">9</button>
+                        <button type="button" onclick="mul()" name="*">*</button><br>
+                                <button type="button" onclick="div()" name="/">/</button>
+                                  <button type="button" onclick="num(0)" name="0">0</button>
+                                  <button type="button" onclick="equals()"name="=">=</button>
+                                    <button type="button" onclick="cle()" name="AC">AC</button>
+    </form>
+
+  </body>
+</html>
